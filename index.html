@@ -5,18 +5,411 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Traffic Ticket Search | Find Help for Speeding, Red Light & Parking Tickets Nationwide</title>
-
   <link rel="canonical" href="https://trafficticketsearch.com/" />
-
   <meta name="description" content="Search and connect with traffic ticket professionals nationwide. Speeding, red light, parking tickets and more. Call 888-845-3552 now." />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Traffic Ticket Search | Nationwide Ticket Help">
   <meta property="og:description" content="Find traffic ticket help across the U.S. Call now or get matched online.">
   <meta property="og:url" content="https://trafficticketsearch.com/">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://trafficticketsearch.com/preview.jpg">
 
-  <!-- Structured Data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Traffic Ticket Search | Nationwide Ticket Help">
+  <meta name="twitter:description" content="Find traffic ticket help across the U.S. Call now or get matched online.">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --light: #e2e8f0;
+      --accent: #dc2626;
+      --accent-dark: #b91c1c;
+      --accent-2: #2563eb;
+      --accent-2-dark: #1d4ed8;
+      --success: #16a34a;
+      --max: 1140px;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background: var(--bg);
+      color: #fff;
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .topbar a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--bg);
+      letter-spacing: -0.4px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-weight: 700;
+      color: var(--bg);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .cta-small {
+      background: var(--success);
+      color: #fff !important;
+      padding: 10px 16px;
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+      color: white;
+      padding: 70px 20px 56px;
+    }
+
+    .hero-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 52px;
+      line-height: 1.05;
+      letter-spacing: -1.2px;
+    }
+
+    .hero p {
+      margin: 0 0 24px;
+      font-size: 19px;
+      color: #dbeafe;
+      max-width: 760px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 16px;
+      transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-call {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-call:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-lead {
+      background: var(--accent-2);
+      color: #fff;
+    }
+
+    .btn-lead:hover {
+      background: var(--accent-2-dark);
+    }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.25);
+      color: #fff;
+      background: transparent;
+    }
+
+    .hero-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .hero-list div {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 700;
+    }
+
+    .hero-card {
+      background: #fff;
+      color: var(--text);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .hero-card p {
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 16px;
+    }
+
+    .callout {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .callout strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 68px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 38px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 12px;
+      font-size: 40px;
+      line-height: 1.1;
+      letter-spacing: -0.8px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid #eef2f7;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tickets {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .ticket-item {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px;
+      text-align: center;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .wide-banner {
+      background: linear-gradient(135deg, #fee2e2 0%, #eff6ff 100%);
+      border: 1px solid #fecaca;
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .wide-banner h3 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    .wide-banner p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 760px;
+    }
+
+    .footer {
+      background: var(--bg);
+      color: #cbd5e1;
+      padding: 36px 20px;
+    }
+
+    .footer-wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      gap: 16px;
+    }
+
+    .footer strong {
+      color: white;
+    }
+
+    .legal {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 980px) {
+      .hero-wrap,
+      .grid-3,
+      .tickets {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-list {
+        grid-template-columns: 1fr;
+      }
+
+      .wide-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h1 { font-size: 40px; }
+      .section-title h2 { font-size: 32px; }
+      .brand { font-size: 24px; }
+    }
+
+    @media (max-width: 720px) {
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      h1 { font-size: 34px; }
+      .hero { padding-top: 48px; }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,55 +419,44 @@
     "telephone": "+1-888-845-3552",
     "areaServed": "US",
     "description": "Nationwide traffic ticket referral platform connecting drivers with service providers.",
-    "serviceType": "Traffic Ticket Referral"
+    "serviceType": "Traffic Ticket Referral",
+    "availableLanguage": ["English"]
   }
   </script>
-
-  <!-- KEEP YOUR SAME CSS (no change needed) -->
 </head>
-
 <body>
-
-  <!-- TOP BAR -->
   <div class="topbar">
-    Nationwide Traffic Ticket Help Line:
-    <a href="tel:8888453552">888-845-3552</a>
+    Nationwide Traffic Ticket Help Line: <a href="tel:8888453552">888-845-3552</a>
   </div>
 
-  <!-- NAV -->
   <header class="navbar">
     <div class="nav-wrap">
-      <a href="#" class="brand">Traffic<span>Search</span>.com</a>
-
+      <a href="#top" class="brand">Traffic<span>TicketSearch</span>.com</a>
       <nav class="nav-links">
         <a href="#services">Ticket Types</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#contact-options">Get Help</a>
-        <a href="YOUR_AFFILIATE_LINK" class="cta-small">Speak to a Live Agent</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" class="cta-small">Speak to a Live Agent</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-wrap">
       <div>
-        <div class="eyebrow">Search & match traffic ticket help nationwide</div>
-
+        <div class="eyebrow">Nationwide referral platform for traffic ticket help</div>
         <h1>Search Traffic Ticket Help Nationwide – Speeding, Red Light, Parking & More</h1>
-
         <p>
-          TrafficTicketSearch.com helps drivers across the United States find and connect with traffic ticket professionals and service providers.
-          Whether you received a speeding ticket, red light violation, stop sign citation, or parking ticket, you can quickly search and get matched.
-          We serve all 50 states including California, Texas, Florida, New York and more.
+          TrafficTicketSearch.com helps drivers nationwide connect with independent traffic ticket professionals and legal service partners.
+          We help with speeding tickets, red light camera tickets, stop sign violations, parking tickets, cell phone tickets,
+          license issues, and many other moving and non-moving violations. We serve drivers in all 50 states including California,
+          Texas, Florida, New York, and more.
         </p>
-
         <div class="button-row">
           <a class="btn btn-call" href="tel:8888453552">Call 888-845-3552</a>
-          <a class="btn btn-lead" href="YOUR_AFFILIATE_LINK">Search Help Online</a>
-          <a class="btn btn-outline" href="YOUR_AFFILIATE_LINK">Speak to a Live Agent</a>
+          <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Search Help Online</a>
+          <a class="btn btn-outline" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Speak to a Live Agent</a>
         </div>
-
         <div class="hero-list">
           <div>Nationwide coverage</div>
           <div>Fast matching system</div>
@@ -86,25 +468,24 @@
       <div class="hero-card">
         <h2>Find help for your ticket</h2>
         <p>
-          Call now or use our search system to get matched with a service provider.
+          Start with a phone call or use our online option to be connected with one of our service partners.
         </p>
-
-        <a class="btn btn-call" style="width:100%" href="tel:8888453552">Call Now</a>
-        <a class="btn btn-lead" style="width:100%; margin-top:10px;" href="YOUR_AFFILIATE_LINK">Search Now</a>
-
+        <a class="btn btn-call" style="width:100%; margin-bottom:12px;" href="tel:8888453552">Call Now</a>
+        <a class="btn btn-lead" style="width:100%;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Search Now</a>
         <div class="callout">
-          <strong>Common tickets:</strong>
-          Speeding, red light, stop sign, parking, careless driving, and more.
+          <strong>Common tickets we help route:</strong>
+          Speeding, red light, stop sign, parking, lane violations, suspended license issues, careless driving, and more.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section class="section" id="services">
     <div class="section-title">
       <h2>Traffic ticket types we help with</h2>
-      <p>Search and get connected for a wide range of violations.</p>
+      <p>
+        Whether it is a simple parking citation or a more serious moving violation, our goal is to connect you with an appropriate referral partner quickly.
+      </p>
     </div>
 
     <div class="tickets">
@@ -119,45 +500,76 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="section" id="how-it-works">
     <div class="section-title">
       <h2>How Traffic Ticket Search Works</h2>
+      <p>
+        Fast traffic solutions without overcomplicating the process.
+      </p>
     </div>
 
     <div class="grid-3">
       <div class="card">
-        <h3>1. Search or call</h3>
-        <p>Start by calling or clicking to search for help.</p>
+        <h3>1. Call or search</h3>
+        <p>
+          Visitors can call the main number immediately or use the online help button to reach a partner form or intake page.
+        </p>
       </div>
-
       <div class="card">
-        <h3>2. Enter details</h3>
-        <p>Provide ticket type and location.</p>
+        <h3>2. Share basic details</h3>
+        <p>
+          Drivers provide basic information about the type of ticket, state, and citation issue so they can be routed properly.
+        </p>
       </div>
-
       <div class="card">
         <h3>3. Get matched</h3>
-        <p>We connect you with a service provider.</p>
+        <p>
+          We refer the inquiry to one of our independent service partners who may assist with the ticket or next steps.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <section class="section" id="contact-options">
+    <div class="wide-banner">
+      <div>
+        <h3>Ready to find traffic ticket help?</h3>
+        <p>
+          Call our main line, submit your information online, or choose the live agent option to be redirected to one of our referral partners.
+        </p>
+      </div>
+      <div class="button-row" style="margin:0; min-width:280px;">
+        <a class="btn btn-call" href="tel:8888453552">Call Now</a>
+        <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Search Help</a>
+        <a class="btn btn-outline" style="color:#0f172a; border-color:#cbd5e1;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Live Agent</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Nationwide Traffic Ticket Search and Referral</h2>
+      <p>
+        If you received a traffic ticket, acting quickly can make a difference. Our network helps drivers across the United States
+        find assistance for speeding tickets, red light violations, parking citations, and more. Whether your ticket is recent or pending,
+        you can call now or use our online system to connect with a service provider.
+      </p>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="footer-wrap">
-      <div><strong>TrafficTicketSearch.com</strong> — Nationwide referral platform</div>
-
+      <div><strong>TrafficTicketSearch.com</strong> — Nationwide traffic ticket referral platform</div>
       <div class="legal">
-        TrafficTicketSearch.com is not a law firm and does not provide legal advice.
-        We connect users with independent service providers and partners.
+        TrafficTicketSearch.com is not a law firm, does not provide legal advice, and does not directly represent clients in legal matters.
+        We are a marketing and referral website that may connect consumers with independent attorneys, law firms, or other traffic ticket service providers,
+        depending on availability and partner coverage. Calling or submitting information through this site does not create an attorney-client relationship.
+        Results are not guaranteed. Partner availability may vary by state and issue type.
       </div>
-
       <div class="legal">
-        Phone: <a href="tel:8888453552">888-845-3552</a>
+        Main Phone: <a href="tel:8888453552" style="color:#fff; text-decoration:underline;">888-845-3552</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
