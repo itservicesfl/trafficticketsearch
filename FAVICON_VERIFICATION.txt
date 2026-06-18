@@ -1,0 +1,3 @@
+Favicon inserted into 101 HTML pages.
+Website root used: trafficticketsearch
+Files added: favicon.ico, favicon.svg, favicon.png, favicon-32x32.png, favicon-16x16.png, apple-touch-icon.png, android-chrome icons, site.webmanifest.
