@@ -1,22 +1,22 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Traffic Ticket Search | Find Help for Speeding, Red Light & Parking Tickets Nationwide</title>
+  <title>Traffic Ticket Search | Speak to a Live Agent for Ticket Help Nationwide</title>
   <link rel="canonical" href="https://trafficticketsearch.com/" />
-  <meta name="description" content="Search and connect with traffic ticket professionals nationwide. Speeding, red light, parking tickets and more. Call 888-845-3552 now." />
+  <meta name="description" content="TrafficTicketSearch.com helps drivers connect with traffic ticket help nationwide. Click to speak with a live agent now for speeding, red light, parking, license issues and more." />
 
   <meta property="og:title" content="Traffic Ticket Search | Nationwide Ticket Help">
-  <meta property="og:description" content="Find traffic ticket help across the U.S. Call now or get matched online.">
+  <meta property="og:description" content="Find traffic ticket help across the U.S. Click now to speak with a live agent.">
   <meta property="og:url" content="https://trafficticketsearch.com/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://trafficticketsearch.com/preview.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Traffic Ticket Search | Nationwide Ticket Help">
-  <meta name="twitter:description" content="Find traffic ticket help across the U.S. Call now or get matched online.">
+  <meta name="twitter:description" content="Find traffic ticket help across the U.S. Click now to speak with a live agent.">
 
   <style>
     :root {
@@ -47,10 +47,7 @@
       line-height: 1.5;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .topbar {
       background: var(--bg);
@@ -92,9 +89,7 @@
       letter-spacing: -0.4px;
     }
 
-    .brand span {
-      color: var(--accent);
-    }
+    .brand span { color: var(--accent); }
 
     .nav-links {
       display: flex;
@@ -105,9 +100,7 @@
       color: var(--bg);
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+    .nav-links a:hover { color: var(--accent); }
 
     .cta-small {
       background: var(--success);
@@ -174,6 +167,7 @@
       font-weight: 800;
       font-size: 16px;
       transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+      text-align: center;
     }
 
     .btn:hover {
@@ -181,24 +175,10 @@
       opacity: 0.96;
     }
 
-    .btn-call {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn-call:hover {
-      background: var(--accent-dark);
-    }
-
-    .btn-lead {
-      background: var(--accent-2);
-      color: #fff;
-    }
-
-    .btn-lead:hover {
-      background: var(--accent-2-dark);
-    }
-
+    .btn-call { background: var(--accent); color: #fff; }
+    .btn-call:hover { background: var(--accent-dark); }
+    .btn-lead { background: var(--accent-2); color: #fff; }
+    .btn-lead:hover { background: var(--accent-2-dark); }
     .btn-outline {
       border: 2px solid rgba(255,255,255,0.25);
       color: #fff;
@@ -356,14 +336,143 @@
       gap: 16px;
     }
 
-    .footer strong {
-      color: white;
-    }
+    .footer strong { color: white; }
 
     .legal {
       font-size: 14px;
       line-height: 1.7;
       color: #cbd5e1;
+    }
+
+    .floating-cta {
+      position: fixed;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      z-index: 50;
+      display: none;
+      text-align: center;
+      background: var(--success);
+      color: #fff;
+      padding: 16px 20px;
+      border-radius: 999px;
+      font-weight: 900;
+      box-shadow: 0 14px 35px rgba(15, 23, 42, 0.25);
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      color: var(--bg);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-btn.active {
+      background: var(--bg);
+      color: #fff;
+      border-color: var(--bg);
+    }
+
+    .language-gate {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: linear-gradient(135deg, rgba(15,23,42,.97), rgba(30,41,59,.97));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+    }
+
+    .language-gate.hidden { display: none; }
+
+    .language-box {
+      width: min(680px, 100%);
+      background: #fff;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.34);
+      text-align: center;
+    }
+
+    .language-box h2 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      color: var(--bg);
+    }
+
+    .language-box p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .language-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .language-option {
+      border: 2px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 26px 18px;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+      font-weight: 900;
+      font-size: 22px;
+      color: var(--bg);
+    }
+
+    .language-option:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, .12);
+    }
+
+    .language-option span {
+      display: block;
+      font-size: 46px;
+      margin-bottom: 10px;
+    }
+
+    [data-lang="es"] { display: none; }
+
+    body.lang-es [data-lang="en"] { display: none; }
+    body.lang-es [data-lang="es"] { display: initial; }
+    body.lang-es section[data-lang="es"],
+    body.lang-es div[data-lang="es"],
+    body.lang-es nav[data-lang="es"],
+    body.lang-es header[data-lang="es"],
+    body.lang-es footer[data-lang="es"] { display: block; }
+    body.lang-es .nav-links[data-lang="es"] { display: flex; }
+
+    body.lang-en [data-lang="es"] { display: none; }
+    body.lang-en [data-lang="en"] { display: initial; }
+    body.lang-en section[data-lang="en"],
+    body.lang-en div[data-lang="en"],
+    body.lang-en nav[data-lang="en"],
+    body.lang-en header[data-lang="en"],
+    body.lang-en footer[data-lang="en"] { display: block; }
+    body.lang-en .nav-links[data-lang="en"] { display: flex; }
+
+    @media (max-width: 720px) {
+      .language-options { grid-template-columns: 1fr; }
+      .language-box h2 { font-size: 28px; }
+      .floating-cta { display:block; }
+      body { padding-bottom: 76px; }
     }
 
     @media (max-width: 980px) {
@@ -393,17 +502,11 @@
         align-items: flex-start;
       }
 
-      .nav-links {
-        gap: 14px;
-      }
+      .nav-links { gap: 14px; }
 
-      .button-row {
-        flex-direction: column;
-      }
+      .button-row { flex-direction: column; }
 
-      .btn {
-        width: 100%;
-      }
+      .btn { width: 100%; }
 
       h1 { font-size: 34px; }
       .hero { padding-top: 48px; }
@@ -416,62 +519,116 @@
     "@type": "LegalService",
     "name": "TrafficTicketSearch.com",
     "url": "https://trafficticketsearch.com",
-    "telephone": "+1-888-845-3552",
     "areaServed": "US",
     "description": "Nationwide traffic ticket referral platform connecting drivers with service providers.",
     "serviceType": "Traffic Ticket Referral",
-    "availableLanguage": ["English"]
+    "availableLanguage": ["English", "Spanish"]
   }
   </script>
+
+  <script>
+    function setLanguage(lang) {
+      document.body.classList.remove('lang-en', 'lang-es');
+      document.body.classList.add(lang === 'es' ? 'lang-es' : 'lang-en');
+      document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+      localStorage.setItem('trafficticketsearch_lang', lang);
+      var gate = document.getElementById('languageGate');
+      if (gate) gate.classList.add('hidden');
+      document.querySelectorAll('.lang-btn').forEach(function(btn){
+        btn.classList.toggle('active', btn.dataset.langChoice === lang);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var saved = localStorage.getItem('trafficticketsearch_lang');
+      if (saved === 'en' || saved === 'es') {
+        setLanguage(saved);
+      } else {
+        document.body.classList.add('lang-en');
+      }
+    });
+  </script>
 </head>
-<body>
-  <div class="topbar">
-    Nationwide Traffic Ticket Help Line: <a href="tel:8888453552">888-845-3552</a>
+
+<body class="lang-en">
+  <div id="languageGate" class="language-gate">
+    <div class="language-box">
+      <h2>Choose Your Language / Elija su Idioma</h2>
+      <p>Select a language to continue. / Seleccione un idioma para continuar.</p>
+      <div class="language-options">
+        <button class="language-option" onclick="setLanguage('es')" type="button"><span>🇪🇸</span>Para Español</button>
+        <button class="language-option" onclick="setLanguage('en')" type="button"><span>🇺🇸</span>For English</button>
+      </div>
+    </div>
   </div>
 
-  <header class="navbar">
+  <div class="topbar" data-lang="en">
+    Need traffic ticket help? <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Click here to speak with a live agent now</a>
+  </div>
+  <div class="topbar" data-lang="es">
+    ¿Necesita ayuda con una multa de tránsito? <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Haga clic aquí para hablar con un agente en vivo ahora</a>
+  </div>
+
+  <header class="navbar" data-lang="en">
     <div class="nav-wrap">
-      <a href="#top" class="brand">Traffic<span>TicketSearch</span>.com</a>
+      <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" class="brand">Traffic<span>TicketSearch</span>.com</a>
       <nav class="nav-links">
-        <a href="#services">Ticket Types</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#contact-options">Get Help</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Ticket Types</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">How It Works</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Get Help</a>
         <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" class="cta-small">Speak to a Live Agent</a>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang-choice="en" onclick="setLanguage('en')" type="button">🇺🇸 EN</button>
+          <button class="lang-btn" data-lang-choice="es" onclick="setLanguage('es')" type="button">🇪🇸 ES</button>
+        </div>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="top">
+  <header class="navbar" data-lang="es">
+    <div class="nav-wrap">
+      <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" class="brand">Traffic<span>TicketSearch</span>.com</a>
+      <nav class="nav-links">
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Tipos de Multas</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Cómo Funciona</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Obtener Ayuda</a>
+        <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" class="cta-small">Hablar con un Agente</a>
+        <div class="language-switcher">
+          <button class="lang-btn" data-lang-choice="en" onclick="setLanguage('en')" type="button">🇺🇸 EN</button>
+          <button class="lang-btn active" data-lang-choice="es" onclick="setLanguage('es')" type="button">🇪🇸 ES</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top" data-lang="en">
     <div class="hero-wrap">
       <div>
-        <div class="eyebrow">Nationwide referral platform for traffic ticket help</div>
-        <h1>Search Traffic Ticket Help Nationwide – Speeding, Red Light, Parking & More</h1>
+        <div class="eyebrow">Nationwide traffic ticket search and referral platform</div>
+        <h1>Speak to a Live Agent About Your Traffic Ticket Now</h1>
         <p>
-          TrafficTicketSearch.com helps drivers nationwide connect with independent traffic ticket professionals and legal service partners.
-          We help with speeding tickets, red light camera tickets, stop sign violations, parking tickets, cell phone tickets,
-          license issues, and many other moving and non-moving violations. We serve drivers in all 50 states including California,
-          Texas, Florida, New York, and more.
+          TrafficTicketSearch.com helps drivers nationwide search for traffic ticket assistance and connect with independent service partners. Click the live-agent button now to continue for help with speeding tickets, red light camera tickets, stop sign violations, parking citations, cell phone tickets, license issues, and more.
         </p>
         <div class="button-row">
-          <a class="btn btn-call" href="tel:8888453552">Call 888-845-3552</a>
-          <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Search Help Online</a>
-          <a class="btn btn-outline" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Speak to a Live Agent</a>
+          <a class="btn btn-call" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Speak to a Live Agent Now</a>
+          <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Search Ticket Help Now</a>
+          <a class="btn btn-outline" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Continue to Live Help</a>
         </div>
         <div class="hero-list">
           <div>Nationwide coverage</div>
           <div>Fast matching system</div>
           <div>All ticket types</div>
-          <div>Instant call connection</div>
+          <div>Simple click-first flow</div>
         </div>
       </div>
 
       <div class="hero-card">
         <h2>Find help for your ticket</h2>
         <p>
-          Start with a phone call or use our online option to be connected with one of our service partners.
+          Click below to continue to a live-agent partner page and start your traffic ticket help request.
         </p>
-        <a class="btn btn-call" style="width:100%; margin-bottom:12px;" href="tel:8888453552">Call Now</a>
-        <a class="btn btn-lead" style="width:100%;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Search Now</a>
+        <a class="btn btn-call" style="width:100%; margin-bottom:12px;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Speak to a Live Agent Now</a>
+        <a class="btn btn-lead" style="width:100%;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Continue to Live Help</a>
         <div class="callout">
           <strong>Common tickets we help route:</strong>
           Speeding, red light, stop sign, parking, lane violations, suspended license issues, careless driving, and more.
@@ -480,7 +637,43 @@
     </div>
   </section>
 
-  <section class="section" id="services">
+  <section class="hero" id="inicio" data-lang="es">
+    <div class="hero-wrap">
+      <div>
+        <div class="eyebrow">Plataforma nacional para buscar ayuda con multas de tránsito</div>
+        <h1>Hable con un Agente en Vivo Sobre su Multa de Tránsito Ahora</h1>
+        <p>
+          TrafficTicketSearch.com ayuda a conductores en todo el país a buscar asistencia para multas de tránsito y conectarse con proveedores independientes. Haga clic en el botón de agente en vivo ahora para continuar con ayuda por exceso de velocidad, semáforo en rojo, señal de pare, estacionamiento, uso de celular, problemas de licencia y más.
+        </p>
+        <div class="button-row">
+          <a class="btn btn-call" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Hablar con un Agente Ahora</a>
+          <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Buscar Ayuda con la Multa</a>
+          <a class="btn btn-outline" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Continuar a Ayuda en Vivo</a>
+        </div>
+        <div class="hero-list">
+          <div>Cobertura nacional</div>
+          <div>Sistema rápido de conexión</div>
+          <div>Todo tipo de multas</div>
+          <div>Proceso simple con un clic</div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Encuentre ayuda para su multa</h2>
+        <p>
+          Haga clic abajo para continuar a una página de agente en vivo y empezar su solicitud de ayuda con la multa.
+        </p>
+        <a class="btn btn-call" style="width:100%; margin-bottom:12px;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Hablar con un Agente Ahora</a>
+        <a class="btn btn-lead" style="width:100%;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Continuar a Ayuda en Vivo</a>
+        <div class="callout">
+          <strong>Multas comunes que ayudamos a dirigir:</strong>
+          Exceso de velocidad, semáforo en rojo, señal de pare, estacionamiento, cambio de carril, licencia suspendida, manejo descuidado y más.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-lang="en">
     <div class="section-title">
       <h2>Traffic ticket types we help with</h2>
       <p>
@@ -500,7 +693,27 @@
     </div>
   </section>
 
-  <section class="section" id="how-it-works">
+  <section class="section" data-lang="es">
+    <div class="section-title">
+      <h2>Tipos de multas de tránsito que ayudamos a dirigir</h2>
+      <p>
+        Ya sea una multa de estacionamiento o una infracción más seria, nuestro objetivo es conectarlo rápidamente con un socio de referencia apropiado.
+      </p>
+    </div>
+
+    <div class="tickets">
+      <div class="ticket-item">Exceso de Velocidad</div>
+      <div class="ticket-item">Semáforo en Rojo</div>
+      <div class="ticket-item">Señal de Pare</div>
+      <div class="ticket-item">Estacionamiento</div>
+      <div class="ticket-item">Uso de Celular</div>
+      <div class="ticket-item">Violación de Carril</div>
+      <div class="ticket-item">Manejo Descuidado</div>
+      <div class="ticket-item">Problemas de Licencia</div>
+    </div>
+  </section>
+
+  <section class="section" data-lang="en">
     <div class="section-title">
       <h2>How Traffic Ticket Search Works</h2>
       <p>
@@ -510,9 +723,9 @@
 
     <div class="grid-3">
       <div class="card">
-        <h3>1. Call or search</h3>
+        <h3>1. Click to start</h3>
         <p>
-          Visitors can call the main number immediately or use the online help button to reach a partner form or intake page.
+          Visitors click the live-agent button and are redirected to the partner intake page.
         </p>
       </div>
       <div class="card">
@@ -530,46 +743,117 @@
     </div>
   </section>
 
-  <section class="section" id="contact-options">
+  <section class="section" data-lang="es">
+    <div class="section-title">
+      <h2>Cómo Funciona Traffic Ticket Search</h2>
+      <p>
+        Soluciones rápidas para multas de tránsito sin complicar el proceso.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>1. Haga clic para empezar</h3>
+        <p>
+          El visitante hace clic en el botón de agente en vivo y es redirigido a la página del socio.
+        </p>
+      </div>
+      <div class="card">
+        <h3>2. Comparta datos básicos</h3>
+        <p>
+          El conductor proporciona información básica sobre el tipo de multa, estado e infracción para ser dirigido correctamente.
+        </p>
+      </div>
+      <div class="card">
+        <h3>3. Sea conectado</h3>
+        <p>
+          Referimos la solicitud a uno de nuestros socios independientes que puede ayudar con la multa o los próximos pasos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-lang="en">
     <div class="wide-banner">
       <div>
         <h3>Ready to find traffic ticket help?</h3>
         <p>
-          Call our main line, submit your information online, or choose the live agent option to be redirected to one of our referral partners.
+          Click the live-agent option to continue to one of our referral partners and start your ticket help request now.
         </p>
       </div>
       <div class="button-row" style="margin:0; min-width:280px;">
-        <a class="btn btn-call" href="tel:8888453552">Call Now</a>
-        <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Ticket Citation</a>
+        <a class="btn btn-call" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Speak to a Live Agent Now</a>
+        <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Start Ticket Help</a>
         <a class="btn btn-outline" style="color:#0f172a; border-color:#cbd5e1;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Live Agent</a>
       </div>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-lang="es">
+    <div class="wide-banner">
+      <div>
+        <h3>¿Listo para encontrar ayuda para su multa?</h3>
+        <p>
+          Haga clic en la opción de agente en vivo para continuar con uno de nuestros socios de referencia y comenzar ahora.
+        </p>
+      </div>
+      <div class="button-row" style="margin:0; min-width:280px;">
+        <a class="btn btn-call" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Hablar con un Agente Ahora</a>
+        <a class="btn btn-lead" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Empezar Ayuda con la Multa</a>
+        <a class="btn btn-outline" style="color:#0f172a; border-color:#cbd5e1;" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Agente en Vivo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-lang="en">
     <div class="section-title">
       <h2>Nationwide Traffic Ticket Search and Referral</h2>
       <p>
-        If you received a traffic ticket, acting quickly can make a difference. Our network helps drivers across the United States
-        find assistance for speeding tickets, red light violations, parking citations, and more. Whether your ticket is recent or pending,
-        you can call now or use our online system to connect with a service provider.
+        If you received a traffic ticket, acting quickly can make a difference. Our network helps drivers across the United States find assistance for speeding tickets, red light violations, parking citations, and more. Whether your ticket is recent or pending, click now to connect with a service provider.
       </p>
     </div>
   </section>
 
-  <footer class="footer">
+  <section class="section" data-lang="es">
+    <div class="section-title">
+      <h2>Búsqueda y Referencia Nacional para Multas de Tránsito</h2>
+      <p>
+        Si recibió una multa de tránsito, actuar rápido puede hacer la diferencia. Nuestra red ayuda a conductores en Estados Unidos a encontrar asistencia para multas por velocidad, semáforo en rojo, estacionamiento y más. Ya sea que su multa sea reciente o pendiente, haga clic ahora para conectarse con un proveedor de servicio.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer" data-lang="en">
     <div class="footer-wrap">
       <div><strong>TrafficTicketSearch.com</strong> — Nationwide traffic ticket referral platform</div>
       <div class="legal">
         TrafficTicketSearch.com is not a law firm, does not provide legal advice, and does not directly represent clients in legal matters.
         We are a marketing and referral website that may connect consumers with independent attorneys, law firms, or other traffic ticket service providers,
-        depending on availability and partner coverage. Calling or submitting information through this site does not create an attorney-client relationship.
+        depending on availability and partner coverage. Clicking or submitting information through this site does not create an attorney-client relationship.
         Results are not guaranteed. Partner availability may vary by state and issue type.
       </div>
       <div class="legal">
-        Main Phone: <a href="tel:8888453552" style="color:#fff; text-decoration:underline;">888-845-3552</a>
+        Get Help: <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" style="color:#fff; text-decoration:underline;">Speak to a live agent now</a>
       </div>
     </div>
   </footer>
+
+  <footer class="footer" data-lang="es">
+    <div class="footer-wrap">
+      <div><strong>TrafficTicketSearch.com</strong> — Plataforma nacional de referencia para multas de tránsito</div>
+      <div class="legal">
+        TrafficTicketSearch.com no es una firma de abogados, no ofrece asesoría legal y no representa directamente a clientes en asuntos legales.
+        Somos un sitio web de marketing y referencia que puede conectar consumidores con abogados independientes, firmas legales u otros proveedores de servicios para multas de tránsito,
+        según disponibilidad y cobertura de socios. Hacer clic o enviar información por este sitio no crea una relación abogado-cliente.
+        Los resultados no están garantizados. La disponibilidad de socios puede variar por estado y tipo de caso.
+      </div>
+      <div class="legal">
+        Obtener Ayuda: <a href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971" style="color:#fff; text-decoration:underline;">Hablar con un agente en vivo ahora</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" data-lang="en" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Speak to a Live Agent Now</a>
+  <a class="floating-cta" data-lang="es" href="https://afflat3c1.com/trk/lnk/2FF6C979-CA31-45BB-BAD4-E81C72472FF7/?o=26429&c=918277&a=792052&k=9DF675E62E99F60EF2792C45D40E0D62&l=27971">Hablar con un Agente Ahora</a>
 </body>
 </html>
